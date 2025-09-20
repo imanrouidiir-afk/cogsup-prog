@@ -1,0 +1,35 @@
+#Expyriment 1.0.0 (Python 3.13.5), .xpe-file, coding: UTF-8
+#date: Sat Sep 20 2025 14:03:06
+#sha1: None
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Darwin', node='MacBook-Air-IR.local', release='22.3.0', version='Darwin Kernel Version 22.3.0: Mon Jan 30 20:39:35 PST 2023; root:xnu-8792.81.3~2/RELEASE_ARM64_T8103', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+2063,design,log,
+#design: #exp: Square
+#design: block_cnt,block_id,trial_cnt,trial_id
+2063,design,logged,
+2063,Experiment,started
+2081,Stimulus,presented,0
+3082,Stimulus,presented,1
+3097,Stimulus,presented,2
+7953,Keyboard,received,13,wait
+7955,Experiment,ended
+8088,stdout,received,'True'
+1125589,stderr,received,'  File \x1b[35m"<python-input-30>"\x1b[0m, line \x1b[35m1\x1b[0m\n    cd \x1b[1;31m~\x1b[0m/Programming/Assignments/Week-2/Exercises\n       \x1b[1;31m^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+1151930,stderr,received,'  File \x1b[35m"<python-input-31>"\x1b[0m, line \x1b[35m1\x1b[0m\n    cd \x1b[1;31mExercises\x1b[0m\n       \x1b[1;31m^^^^^^^^^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+4873,stdout,received,'True'
+1686204,stdout,received,'*** DEVELOP MODE ***'
+1694415,stdout,received,'True'
+2811916,stdout,received,'  File \x1b[35m"<python-input-30>"\x1b[0m, line \x1b[35m1\x1b[0m\n    cd \x1b[1;31m~\x1b[0m/Programming/Assignments/Week-2/Exercises\n       \x1b[1;31m^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+2838257,stdout,received,'  File \x1b[35m"<python-input-31>"\x1b[0m, line \x1b[35m1\x1b[0m\n    cd \x1b[1;31mExercises\x1b[0m\n       \x1b[1;31m^^^^^^^^^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+415483,stdout,received,'True'
+690042,stdout,received,'*** DEVELOP MODE ***'
+763665,stderr,received,'  File \x1b[35m"<python-input-26>"\x1b[0m, line \x1b[35m12\x1b[0m\n    python \x1b[1;31msquare\x1b[0m.py\n           \x1b[1;31m^^^^^^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+780960,stderr,received,'  File \x1b[35m"<python-input-27>"\x1b[0m, line \x1b[35m1\x1b[0m\n    \x1b[1;31m>>\x1b[0m> from expyriment import design, control, stimuli\n    \x1b[1;31m^^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+904247,stdout,received,'*** DEVELOP MODE ***'
+909255,stdout,received,'True'
+2590586,stdout,received,'*** DEVELOP MODE ***'
+2598797,stdout,received,'True'
+3716298,stdout,received,'  File \x1b[35m"<python-input-30>"\x1b[0m, line \x1b[35m1\x1b[0m\n    cd \x1b[1;31m~\x1b[0m/Programming/Assignments/Week-2/Exercises\n       \x1b[1;31m^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+3742639,stdout,received,'  File \x1b[35m"<python-input-31>"\x1b[0m, line \x1b[35m1\x1b[0m\n    cd \x1b[1;31mExercises\x1b[0m\n       \x1b[1;31m^^^^^^^^^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'

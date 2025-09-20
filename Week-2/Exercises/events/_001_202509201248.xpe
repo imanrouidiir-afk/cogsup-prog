@@ -1,0 +1,40 @@
+#Expyriment 1.0.0 (Python 3.13.5), .xpe-file, coding: UTF-8
+#date: Sat Sep 20 2025 12:48:37
+#sha1: None
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Darwin', node='MacBook-Air-IR.local', release='22.3.0', version='Darwin Kernel Version 22.3.0: Mon Jan 30 20:39:35 PST 2023; root:xnu-8792.81.3~2/RELEASE_ARM64_T8103', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+4569,stdout,received,'<expyriment.design._structure.Experiment object at 0x11be48690>'
+150487,design,log,
+#design: #exp: Circle
+#design: block_cnt,block_id,trial_cnt,trial_id
+150487,design,logged,
+150487,Experiment,started
+150487,stdout,received,'<expyriment.design._structure.Experiment object at 0x11be48690>'
+150508,Stimulus,presented,0
+150508,stdout,received,'16'
+151524,Stimulus,presented,1
+151524,stdout,received,'10'
+156122,Keyboard,received,13,wait
+156122,stdout,received,'(13, 4597)'
+156124,Experiment,ended
+156140,Stimulus,presented,2
+159263,stdout,received,'True'
+511866,stdout,received,'*** DEVELOP MODE ***'
+606638,stdout,received,'<expyriment.design._structure.Experiment object at 0x11c687820>'
+874663,stdout,received,'<expyriment.design._structure.Experiment object at 0x11c687820>'
+950848,stdout,received,'67'
+959199,stdout,received,'30'
+999104,stdout,received,'14'
+1014129,stdout,received,'(13, 5230)'
+1021951,stdout,received,'True'
+1296510,stdout,received,'*** DEVELOP MODE ***'
+1370133,stdout,received,'  File \x1b[35m"<python-input-26>"\x1b[0m, line \x1b[35m12\x1b[0m\n    python \x1b[1;31msquare\x1b[0m.py\n           \x1b[1;31m^^^^^^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+1387428,stdout,received,'  File \x1b[35m"<python-input-27>"\x1b[0m, line \x1b[35m1\x1b[0m\n    \x1b[1;31m>>\x1b[0m> from expyriment import design, control, stimuli\n    \x1b[1;31m^^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+1510715,stdout,received,'*** DEVELOP MODE ***'
+1515722,stdout,received,'True'
+3197053,stdout,received,'*** DEVELOP MODE ***'
+3205264,stdout,received,'True'
+4322764,stdout,received,'  File \x1b[35m"<python-input-30>"\x1b[0m, line \x1b[35m1\x1b[0m\n    cd \x1b[1;31m~\x1b[0m/Programming/Assignments/Week-2/Exercises\n       \x1b[1;31m^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+4349106,stdout,received,'  File \x1b[35m"<python-input-31>"\x1b[0m, line \x1b[35m1\x1b[0m\n    cd \x1b[1;31mExercises\x1b[0m\n       \x1b[1;31m^^^^^^^^^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
