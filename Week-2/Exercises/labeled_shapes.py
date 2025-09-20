@@ -1,22 +1,33 @@
-from expyriment import design, control, stimuli
+from expyriment import design, control, stimuli, misc
+import math
 control.set_develop_mode()
 exp = design.Experiment(name="Labeled Shapes")
 control.initialize(exp)
-triangle = stimuli.Shape(position=(-150, 0), colour=(128, 0, 128),
-                         vertices=[(-25, -25), (25, -25), (0, 25)])
-hexagon = stimuli.Shape(position=(150, 0), colour=(255, 255, 0),
-                        vertices=[(25, -25), (50, 0), (25, 25),
-                                  (-25, 25), (-50, 0), (-25, -25)])
-triangle_line = stimuli.Line((0, 50), (0, 100), colour=(255, 255, 255), line_width=3, position=(-150, 25))
-hexagon_line = stimuli.Line((0, 50), (0, 100), colour=(255, 255, 255), line_width=3, position=(150, 25))
-triangle_label = stimuli.TextLine("triangle", position=(-150, 120), text_colour=(255, 255, 255))
-hexagon_label = stimuli.TextLine("hexagon", position=(150, 120), text_colour=(255, 255, 255))
+R = 50
+triangle_r = int(2 * R / math.sqrt(3))  # scale triangle so height matches hexagon
+triangle_vertices = misc.geometry.vertices_regular_polygon(3, triangle_r)
+triangle = stimuli.Shape(vertex_list=triangle_vertices, colour=(128, 0, 128))
+triangle.reposition((-150, 0))
+hexagon_vertices = misc.geometry.vertices_regular_polygon(6, R)
+hexagon = stimuli.Shape(vertex_list=hexagon_vertices, colour=(255, 255, 0))
+hexagon.reposition((150, 0))
+triangle_line = stimuli.Line((0, 0), (0, 50), colour=(255, 255, 255), line_width=3)
+triangle_line.reposition((-150, 50))
+hexagon_line = stimuli.Line((0, 0), (0, 50), colour=(255, 255, 255), line_width=3)
+hexagon_line.reposition((150, 50))
+triangle_label = stimuli.TextLine("triangle", text_colour=(255, 255, 255), background_colour=(0, 0, 0))
+triangle_label.reposition((-150, 70))
+hexagon_label = stimuli.TextLine("hexagon", text_colour=(255, 255, 255), background_colour=(0, 0, 0))
+hexagon_label.reposition((150, 70))
+canvas = stimuli.Canvas((800, 600))
+triangle.plot(canvas)
+hexagon.plot(canvas)
+triangle_line.plot(canvas)
+hexagon_line.plot(canvas)
+triangle_label.plot(canvas)
+hexagon_label.plot(canvas)
 control.start(subject_id=1)
-triangle.present(clear=True, update=False)
-hexagon.present(clear=False, update=True)
-triangle_line.present(clear=False, update=True)
-hexagon_line.present(clear=False, update=True)
-triangle_label.present(clear=False, update=True)
-hexagon_label.present(clear=False, update=True)
+canvas.present()
 exp.keyboard.wait()
 control.end()
+
