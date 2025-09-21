@@ -6,7 +6,7 @@ Hint: Write an is_factor helper function.
 
 def is_factor(d, n):
     """True iff (if and only if) d is a divisor of n."""
-     return n % d == 0
+    return n % d == 0
 
 def is_prime(n):
     if n < 2:
