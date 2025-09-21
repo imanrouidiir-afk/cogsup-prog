@@ -150,6 +150,7 @@ create a new one whose keys are sorted alphabetically.
 
 print("Exercise 4.9")
 
+animals = {'zebra': 10, 'dolphin': 25, 'alligator': 3, 'monkey': 5, 'pig': 9}
 sorted_keys = dict(sorted(animals.items()))
 print(sorted_keys)
 
