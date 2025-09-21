@@ -18,7 +18,7 @@ dct = {'a': 3, 'b': 7, 'c': -2, 'd': 10, 'e': 5}
 
 print("Exercise 4.1")
 
-pass
+print(sum(dct.values()))
 
 print("---")
 
@@ -32,7 +32,7 @@ Print the key that has the largest value in dct.
 
 print("Exercise 4.2")
 
-pass
+print(max(dct, key=dct.get))
 
 print("---")
 
@@ -46,7 +46,7 @@ Create a new dictionary with the squares of all the values in dct.
 
 print("Exercise 4.3")
 
-pass
+squares = {k: v**2 for k, v in dct.items()}
 
 print("---")
 
@@ -60,7 +60,9 @@ Print only the keys in dct whose values are even numbers.
 
 print("Exercise 4.4")
 
-pass
+for k, v in dct.items():
+    if v % 2 == 0:
+        print(k)
 
 print("---")
 
@@ -74,7 +76,8 @@ Create a new dictionary that swaps the keys and values in dct.
 
 print("Exercise 4.5")
 
-pass
+swapped = {v: k for k, v in dct.items()}
+print(swapped)
 
 print("---")
 
@@ -91,7 +94,10 @@ s = 'ccctcctttttcc'
 
 print("Exercise 4.6")
 
-pass
+counts = {}
+for ch in s:
+    counts[ch] = counts.get(ch, 0) + 1
+print(counts)
 
 print("---")
 
@@ -110,7 +116,8 @@ responses = 'jjjpjjpppppjj'
 
 print("Exercise 4.7")
 
-pass
+result = [responses_mapping[ch] for ch in responses]
+print(result)
 
 print("---")
 
@@ -125,7 +132,10 @@ Merge the following two dictionaries into one:
 
 print("Exercise 4.8")
 
-pass
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+merged = {**dict1, **dict2}
+print(merged)
 
 print("---")
 
@@ -140,7 +150,8 @@ create a new one whose keys are sorted alphabetically.
 
 print("Exercise 4.9")
 
-pass
+sorted_keys = dict(sorted(animals.items()))
+print(sorted_keys)
 
 print("---")
 
@@ -155,6 +166,7 @@ create a new one whose values appear in increasing order.
 
 print("Exercise 4.10")
 
-pass
+sorted_values = dict(sorted(animals.items(), key=lambda item: item[1]))
+print(sorted_values)
 
 print("---")
