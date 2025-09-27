@@ -1,0 +1,18 @@
+#Expyriment 1.0.0 (Python 3.13.5), .xpe-file, coding: UTF-8
+#date: Wed Sep 24 2025 16:05:52
+#sha1: None
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Darwin', node='FRPARUELT0008.PTCBIO.com', release='22.3.0', version='Darwin Kernel Version 22.3.0: Mon Jan 30 20:39:35 PST 2023; root:xnu-8792.81.3~2/RELEASE_ARM64_T8103', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+13170,design,log,
+#design: #exp: Display Edges
+#design: block_cnt,block_id,trial_cnt,trial_id
+13170,design,logged,
+13170,Experiment,started
+13173,Stimulus,presented,1
+13173,Stimulus,presented,2
+13174,Stimulus,presented,3
+13184,Stimulus,presented,4
+15401,Keyboard,received,13,wait
+15401,Experiment,ended

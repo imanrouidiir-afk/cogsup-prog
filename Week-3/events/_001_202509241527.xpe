@@ -1,0 +1,35 @@
+#Expyriment 1.0.0 (Python 3.13.5), .xpe-file, coding: UTF-8
+#date: Wed Sep 24 2025 15:27:39
+#sha1: None
+#modules: 
+#display: size=(800, 600), window_mode=True, opengl=2
+#os: uname_result(system='Darwin', node='FRPARUELT0008.PTCBIO.com', release='22.3.0', version='Darwin Kernel Version 22.3.0: Mon Jan 30 20:39:35 PST 2023; root:xnu-8792.81.3~2/RELEASE_ARM64_T8103', machine='arm64')
+Time,Type,Event,Value,Detail,Detail2
+3929,stdout,received,'<expyriment.design._structure.Experiment object at 0x12f001e50>'
+32180,design,log,
+#design: #exp: Display Edges
+#design: block_cnt,block_id,trial_cnt,trial_id
+32181,design,logged,
+32181,Experiment,started
+32181,stdout,received,'<expyriment.design._structure.Experiment object at 0x12f001e50>'
+76745,stderr,received,'Exception ignored in: <function Visual.__del__ at 0x12dd93100>'
+76745,stderr,received,'Traceback (most recent call last):'
+76745,stderr,received,'  File "/opt/anaconda3/lib/python3.13/site-packages/expyriment/stimuli/_visual.py", line 266, in __del__'
+76746,stderr,received,'    if self._compression_filename is not None:'
+76746,stderr,received,"AttributeError: 'Rectangle' object has no attribute '_compression_filename'"
+76749,stderr,received,'Traceback (most recent call last):\n  File \x1b[35m"<python-input-11>"\x1b[0m, line \x1b[35m1\x1b[0m, in \x1b[35m<module>\x1b[0m\n    square_top = stimuli.Rectangle((side, side), colour=None, line_width=line_width, line_colour=(255, 0, 0))\n\x1b[1;35mTypeError\x1b[0m: \x1b[35mRectangle.__init__() got an unexpected keyword argument \'line_colour\'\x1b[0m'
+242189,stderr,received,'Traceback (most recent call last):\n  File \x1b[35m"<python-input-14>"\x1b[0m, line \x1b[35m2\x1b[0m, in \x1b[35m<module>\x1b[0m\n    \x1b[31msquare_top.plot\x1b[0m\x1b[1;31m(exp.screen)\x1b[0m\n    \x1b[31m~~~~~~~~~~~~~~~\x1b[0m\x1b[1;31m^^^^^^^^^^^^\x1b[0m\n  File \x1b[35m"/opt/anaconda3/lib/python3.13/site-packages/expyriment/stimuli/_visual.py"\x1b[0m, line \x1b[35m907\x1b[0m, in \x1b[35mplot\x1b[0m\n    if not \x1b[1;31mstimulus._set_surface\x1b[0m(stimulus._get_surface()):\n           \x1b[1;31m^^^^^^^^^^^^^^^^^^^^^\x1b[0m\n\x1b[1;35mAttributeError\x1b[0m: \x1b[35m\'Screen\' object has no attribute \'_set_surface\'\x1b[0m'
+1135841,stderr,received,'Traceback (most recent call last):\n  File \x1b[35m"<python-input-15>"\x1b[0m, line \x1b[35m2\x1b[0m, in \x1b[35m<module>\x1b[0m\n    \x1b[31msquare_top.plot\x1b[0m\x1b[1;31m(exp.screen)\x1b[0m\n    \x1b[31m~~~~~~~~~~~~~~~\x1b[0m\x1b[1;31m^^^^^^^^^^^^\x1b[0m\n  File \x1b[35m"/opt/anaconda3/lib/python3.13/site-packages/expyriment/stimuli/_visual.py"\x1b[0m, line \x1b[35m907\x1b[0m, in \x1b[35mplot\x1b[0m\n    if not \x1b[1;31mstimulus._set_surface\x1b[0m(stimulus._get_surface()):\n           \x1b[1;31m^^^^^^^^^^^^^^^^^^^^^\x1b[0m\n\x1b[1;35mAttributeError\x1b[0m: \x1b[35m\'Screen\' object has no attribute \'_set_surface\'\x1b[0m'
+1231696,stderr,received,'Traceback (most recent call last):\n  File \x1b[35m"<python-input-16>"\x1b[0m, line \x1b[35m1\x1b[0m, in \x1b[35m<module>\x1b[0m\n    square_top.plot(\x1b[1;31mcanvas\x1b[0m)\n                    \x1b[1;31m^^^^^^\x1b[0m\n\x1b[1;35mNameError\x1b[0m: \x1b[35mname \'canvas\' is not defined\x1b[0m'
+1491900,stderr,received,'Traceback (most recent call last):\n  File \x1b[35m"<python-input-19>"\x1b[0m, line \x1b[35m1\x1b[0m, in \x1b[35m<module>\x1b[0m\n    \x1b[1;31msquare_top.blit\x1b[0m(exp.screen)\n    \x1b[1;31m^^^^^^^^^^^^^^^\x1b[0m\n\x1b[1;35mAttributeError\x1b[0m: \x1b[35m\'Rectangle\' object has no attribute \'blit\'\x1b[0m'
+1567458,stderr,received,'  File \x1b[35m"<python-input-21>"\x1b[0m, line \x1b[35m1\x1b[0m\n    square_top.plot(exp.screen)\x1b[1;31m`\x1b[0m\n                               \x1b[1;31m^\x1b[0m\n\x1b[1;35mSyntaxError\x1b[0m: \x1b[35minvalid syntax\x1b[0m'
+1570076,stderr,received,'Traceback (most recent call last):\n  File \x1b[35m"<python-input-22>"\x1b[0m, line \x1b[35m1\x1b[0m, in \x1b[35m<module>\x1b[0m\n    \x1b[31msquare_top.plot\x1b[0m\x1b[1;31m(exp.screen)\x1b[0m\n    \x1b[31m~~~~~~~~~~~~~~~\x1b[0m\x1b[1;31m^^^^^^^^^^^^\x1b[0m\n  File \x1b[35m"/opt/anaconda3/lib/python3.13/site-packages/expyriment/stimuli/_visual.py"\x1b[0m, line \x1b[35m907\x1b[0m, in \x1b[35mplot\x1b[0m\n    if not \x1b[1;31mstimulus._set_surface\x1b[0m(stimulus._get_surface()):\n           \x1b[1;31m^^^^^^^^^^^^^^^^^^^^^\x1b[0m\n\x1b[1;35mAttributeError\x1b[0m: \x1b[35m\'Screen\' object has no attribute \'_set_surface\'\x1b[0m'
+1645646,Stimulus,presented,1
+1645659,Stimulus,presented,2
+1645674,Stimulus,presented,3
+1645690,Stimulus,presented,4
+1645691,stdout,received,'16'
+1724285,stderr,received,'Traceback (most recent call last):\n  File \x1b[35m"<python-input-24>"\x1b[0m, line \x1b[35m1\x1b[0m, in \x1b[35m<module>\x1b[0m\n    \x1b[1;31mexp.screen.present\x1b[0m()\n    \x1b[1;31m^^^^^^^^^^^^^^^^^^\x1b[0m\n\x1b[1;35mAttributeError\x1b[0m: \x1b[35m\'Screen\' object has no attribute \'present\'\x1b[0m'
+1732396,Keyboard,received,13,wait
+1732396,stdout,received,'(13, 1629)'
+1740199,Experiment,ended
