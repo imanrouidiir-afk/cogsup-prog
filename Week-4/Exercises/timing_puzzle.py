@@ -8,12 +8,17 @@ control.initialize(exp)
 fixation = stimuli.FixCross()
 text = stimuli.TextLine("Fixation removed")
 
-fixation.present()
 t0 = exp.clock.time
+fixation.present()
+dt= exp.clock.time - t0
+exp.clock.wait(1000 - dt)
 
-exp.clock.wait(1000)
-
+t0 = exp.clock.time
 text.present()
+fix_duration = (t1 - t0)/1000
+dt= exp.clock.time - t0
+exp.clock.wait(1000 - dt)
+
 t1 = exp.clock.time
 fix_duration = (t1 - t0)/1000
 
