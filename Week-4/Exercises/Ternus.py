@@ -1,8 +1,9 @@
+
 from expyriment import design, control, stimuli
 from expyriment.misc.constants import K_SPACE
 
 control.set_develop_mode(on=True)
-exp = design.Experiment("Ternus Illusion – Centered Color Dots")
+exp = design.Experiment()
 control.initialize(exp)
 
 RADIUS = 40
@@ -18,12 +19,10 @@ BG_COLOR = (0, 0, 0)
 exp.screen.colour = BG_COLOR
 
 def frames_to_ms(frames):
-    """Convert frame count to milliseconds assuming 60 Hz."""
     return int(round(frames * (1000 / 60)))
 
 
 def make_circles(with_tags=False):
-    """Create two Ternus frames with 3 discs (optionally colored in center)."""
     y = 0
     frame1_pos = [(-DISTANCE, y), (0, y), (DISTANCE, y)]        
     frame2_pos = [(0, y), (DISTANCE, y), (DISTANCE * 2, y)]     
@@ -45,7 +44,6 @@ def make_circles(with_tags=False):
 
 
 def present_for(stims, frames):
-    """Draw stimuli for given number of frames."""
     exp.screen.clear()
     for s in stims:
         s.present(clear=False)
@@ -53,9 +51,8 @@ def present_for(stims, frames):
 
 
 def add_tags(text):
-    """Display info text below the stimuli."""
     tag = stimuli.TextLine(text, position=(0, -200))
-  tag.present(clear=False)
+    tag.present(clear=False)
 
 
 displays = [
