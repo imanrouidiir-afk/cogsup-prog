@@ -6,7 +6,6 @@ def load(stims):
         stim.preload()
 
 def timed_draw(stims):
-    exp = current_exp
     t0 = exp.clock.time
     for stim in stims:
         stim.present(clear=False)
@@ -17,7 +16,6 @@ def timed_draw(stims):
 def present_for(stims, t=1000):
     if not stims or t <= 0:
         return
-    exp = current_exp
     dt = timed_draw(stims)
     exp.clock.wait(max(0, t - dt))
 
