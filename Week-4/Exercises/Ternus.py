@@ -1,4 +1,3 @@
-
 from expyriment import design, control, stimuli
 from expyriment.misc.constants import K_SPACE
 
