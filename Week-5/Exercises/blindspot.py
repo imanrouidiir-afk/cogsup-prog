@@ -13,7 +13,18 @@ def make_circle(r, pos=(0,0)):
     return c
 
 """ Experiment """
-def run_trial():
+def run_trial(side="left"):
+    instruction_text = (
+        f"Cover your {side} eye.\n\n"
+        "Fixate on the black cross.\n\n"
+        "Use the ARROW keys to move the circle.\n"
+        "Press 1 to make it smaller, 2 to make it larger.\n\n"
+        "When the circle disappears (blind spot reached), press SPACE."
+    )
+    instructions = stimuli.TextScreen("Instructions", instruction_text)
+    instructions.present()
+    exp.keyboard.wait_char(' ')
+    
     fixation = stimuli.FixCross(size=(150, 150), line_width=10, position=[300, 0])
     fixation.preload()
 
