@@ -36,7 +36,7 @@ def run_trial(side="left"):
     fixation.present(True, False)
     circle.present(False, True)
     
-    running = True
+    running = True 
     while running:
         fixation.present(clear=True)
         circle.present(clear=False)
