@@ -2,12 +2,12 @@
 from expyriment import design, control, stimuli
 from expyriment.misc.constants import C_WHITE, C_BLACK, K_LEFT, K_RIGHT, K_UP, K_DOWN
 
-# --- Global settings ---
+
 exp = design.Experiment(name="Blindspot", background_colour=C_WHITE, foreground_colour=C_BLACK)
 control.set_develop_mode(on=True)
 control.initialize(exp)
 
-# --- Function to make a circle ---
+
 def make_circle(radius, position=(0, 0)):
     circle = stimuli.Circle(radius, position=position, colour=C_BLACK)
     circle.preload()
@@ -15,7 +15,7 @@ def make_circle(radius, position=(0, 0)):
 
 
 def run_trial(side):
-    # --- Instructions ---
+    
     text = (
         f"Blind Spot Test – {side} Eye\n\n"
         f"1. Cover your { 'left' if side == 'R' else 'right' } eye.\n"
@@ -36,7 +36,7 @@ def run_trial(side):
     circle_pos = [0, 0]  
     circle = make_circle(radius, circle_pos)
 
-    # --- Trial loop ---
+    
     running = True
     while running:
         # Draw both stimuli
@@ -72,7 +72,7 @@ def run_trial(side):
             
             circle = make_circle(radius, circle_pos)
 
-# --- Run experiment ---
+
 control.start(subject_id=1)
 
 run_trial("L")  
