@@ -64,10 +64,21 @@ def create_balanced_trial_list():
             correct_key = [k for k, v in KEYS_TO_COLORS.items() if v == color_name][0]
             trial_list.append({
                 'word': word,
-                'color_name': color_name,
-                'trial_type': 'match' if word == color_name else 'mismatch',
+                'color_name': word,
+                'trial_type': 'match' 
                 'correct_key': correct_key
             })
+        ders = derangements(WORDS)
+    mismatch = ders[(subject_id - 1) % len(ders)]
+
+    for word, color_name in zip(WORDS, mismatch):
+        correct_key = [k for k, v in KEYS_TO_COLORS.items() if v == color_name][0]
+        trial_list.append({
+            'word': word,
+            'color_name': color_name,
+            'trial_type': 'mismatch',
+            'correct_key': correct_key
+        })
     return trial_list
 """ Experiment """
 def run_trial(block_id, trial_id, trial_data):
@@ -82,12 +93,13 @@ def run_trial(block_id, trial_id, trial_data):
 
     feedback = feedback_correct if correct else feedback_incorrect
     present_for(feedback, t=1000)
-
+N_TRIALS_IN_BLOCK = 8
 control.start(subject_id=1)
 
 present_instructions(INSTR_START)
 
 master_template = create_balanced_trial_list()
+block_repetitions = 2
 
 for block_id in range(1, N_BLOCKS + 1):
     # Each block is a full, shuffled presentation of the 16 unique trials
