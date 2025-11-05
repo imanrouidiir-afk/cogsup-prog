@@ -62,14 +62,13 @@ feedback_incorrect = stimuli.TextLine(FEEDBACK_INCORRECT, text_colour=C_RED); fe
 def create_balanced_trial_list(subject_id):
     trial_list = []
     for word in WORDS:
-        for color_name in WORDS:
-            correct_key = [k for k, v in KEYS_TO_COLORS.items() if v == word][0]
-            trial_list.append({
-                'word': word,
-                'color_name': word,
-                'trial_type': 'match',
-                'correct_key': correct_key
-            })
+        correct_key = [k for k, v in KEYS_TO_COLORS.items() if v == word][0]
+        trial_list.append({
+            'word': word,
+            'color_name': word,
+            'trial_type': 'match',
+            'correct_key': correct_key
+        })
     ders = derangements(WORDS)
     mismatch = ders[(subject_id - 1) % len(ders)]
 
