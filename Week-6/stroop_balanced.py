@@ -9,7 +9,7 @@ KEYS_TO_COLORS = {K_r: 'red', K_b: 'blue', K_g: 'green', K_o: 'orange'}
 RESPONSE_KEYS = list(KEYS_TO_COLORS.keys())
 
 N_BLOCKS = 8
-N_TRIALS_IN_BLOCK = 128 // N_BLOCKS # 16 trials per block
+N_TRIALS_IN_BLOCK = 128 // N_BLOCKS 
 
 INSTR_START = """ Welcome to the Color-Naming Task.
 
@@ -30,7 +30,6 @@ FEEDBACK_INCORRECT = "Incorrect."
 
 """ Helper Functions """
 def present_for(*stims, t=1000):
-    # Simplified helper for drawing and waiting
     dt = exp.clock.time
     exp.screen.clear()
     for stim in stims:
@@ -42,7 +41,11 @@ def present_instructions(text):
   instructions = stimuli.TextScreen(text=text, heading="") 
   instructions.present()
   exp.keyboard.wait()
-  
+    
+def derangements(items):
+    from itertools import permutations
+    return [list(p) for p in permutations(items) 
+            if all(p[i] != items[i] for i in range(len(items)))]
 """ Global settings """
 exp = design.Experiment(name="Stroop_Balanced")
 exp.add_data_variable_names(['block_cnt', 'word', 'color_name', 'RT', 'correct'])
@@ -56,19 +59,18 @@ for w in WORDS: [stims[w][c].preload() for c in WORDS]
 feedback_correct = stimuli.TextLine(FEEDBACK_CORRECT, text_colour=C_GREEN); feedback_correct.preload()
 feedback_incorrect = stimuli.TextLine(FEEDBACK_INCORRECT, text_colour=C_RED); feedback_incorrect.preload()
 
-def create_balanced_trial_list():
+def create_balanced_trial_list(subject_id):
     trial_list = []
     for word in WORDS:
         for color_name in WORDS:
-            # The correct key is for the FONT COLOR (color_name)
-            correct_key = [k for k, v in KEYS_TO_COLORS.items() if v == color_name][0]
+            correct_key = [k for k, v in KEYS_TO_COLORS.items() if v == word][0]
             trial_list.append({
                 'word': word,
                 'color_name': word,
-                'trial_type': 'match' 
+                'trial_type': 'match',
                 'correct_key': correct_key
             })
-        ders = derangements(WORDS)
+    ders = derangements(WORDS)
     mismatch = ders[(subject_id - 1) % len(ders)]
 
     for word, color_name in zip(WORDS, mismatch):
@@ -90,20 +92,17 @@ def run_trial(block_id, trial_id, trial_data):
 
     correct = key == trial_data['correct_key']
     exp.data.add([block_id, trial_id, trial_data['word'], trial_data['color_name'], rt, correct])
-
     feedback = feedback_correct if correct else feedback_incorrect
     present_for(feedback, t=1000)
-N_TRIALS_IN_BLOCK = 8
 control.start(subject_id=1)
+subject_id = exp.subject
 
 present_instructions(INSTR_START)
-
-master_template = create_balanced_trial_list()
+master_template = create_balanced_trial_list(subject_id)
 block_repetitions = 2
 
 for block_id in range(1, N_BLOCKS + 1):
-    # Each block is a full, shuffled presentation of the 16 unique trials
-    current_block_trials = list(master_template) 
+    current_block_trials = master_template * block_repetitions 
     random.shuffle(current_block_trials)
 
     for trial_id in range(1, N_TRIALS_IN_BLOCK + 1):
